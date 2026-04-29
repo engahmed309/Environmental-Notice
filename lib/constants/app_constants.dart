@@ -1,0 +1,33 @@
+class AppConstants {
+  // Padding & Spacing
+  static const double paddingXSmall = 4.0;
+  static const double paddingSmall = 8.0;
+  static const double paddingMedium = 16.0;
+  static const double paddingLarge = 24.0;
+  static const double paddingXLarge = 32.0;
+
+  // Border Radius
+  static const double borderRadiusSmall = 4.0;
+  static const double borderRadiusMedium = 8.0;
+  static const double borderRadiusLarge = 12.0;
+  static const double borderRadiusXLarge = 16.0;
+
+  // Icon Sizes
+  static const double iconSizeSmall = 16.0;
+  static const double iconSizeMedium = 24.0;
+  static const double iconSizeLarge = 32.0;
+  static const double iconSizeXLarge = 48.0;
+
+  // Text Field
+  static const int phoneLength = 9; // For Saudi numbers without country code
+  static const int notesMaxLength = 500;
+
+  // Image
+  static const double imagePickerHeight = 250.0;
+
+  // Animation Duration
+  static const Duration animationDuration = Duration(milliseconds: 300);
+
+  // API
+  static const String apiBaseUrl = 'http://46.62.175.100:2334';
+}
