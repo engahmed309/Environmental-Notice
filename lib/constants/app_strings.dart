@@ -1,10 +1,10 @@
 class AppStrings {
   // App Title
-  static const String appTitle = 'بلاغ بيئي - نسخة تجريبية';
-  static const String appSubtitle = 'المركز الوطني لمكافحة التصحر';
+  static const String appTitle = 'بلاغ بيئي';
+  static const String appSubtitle = 'الإدارة العامة للمتنزهات الوطنية';
 
   // Home Screen
-  static const String homeTitle = 'مرحبا بك';
+  static const String homeTitle = 'مرحبا بك - نسخة تجريبية';
   static const String homeSubtitle =
       'ساعد في حماية ثروتنا النباتية والحياة الفطرية';
   static const String submitReportButton = 'تقديم بلاغ جديد';

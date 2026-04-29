@@ -203,7 +203,13 @@ class _SuccessScreenState extends State<SuccessScreen>
                   const SizedBox(height: AppConstants.paddingMedium),
                   CustomButton(
                     label: AppStrings.goHomeButton,
-                    onPressed: widget.onHome,
+                    onPressed: () {
+                      // Reset the cubit from a context that has the provider (this widget)
+                      try {
+                        context.read<ReportCubit>().resetForm();
+                      } catch (_) {}
+                      widget.onHome();
+                    },
                     width: double.infinity,
                     height: 56,
                     isOutlined: true,

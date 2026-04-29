@@ -10,13 +10,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(AppStrings.appTitle),
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.white,
-      ),
+      // appBar: AppBar(
+      //   title: const Text(AppStrings.appTitle),
+      //   centerTitle: true,
+      //   elevation: 0,
+      //   backgroundColor: AppColors.primary,
+      //   foregroundColor: AppColors.white,
+      // ),
       body: SingleChildScrollView(
         child: AnimatedPage(
           child: Column(
@@ -29,21 +29,32 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Text(
+                      AppStrings.homeTitle,
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.white,
+                      ),
+                    ),
+                    const SizedBox(height: AppConstants.paddingSmall),
+
                     Hero(
                       tag: 'appLogo',
                       child: Image.asset(
-                        'assets/images/logo.png',
-                        width: 72,
-                        height: 72,
-                        fit: BoxFit.contain,
+                        'assets/images/identity.png',
+                        width: MediaQuery.of(context).size.width * .6,
+                        height: MediaQuery.of(context).size.height * .2,
+                        // fit: BoxFit.contain,
+                        color: AppColors.white,
                       ),
                     ),
                     const SizedBox(height: AppConstants.paddingMedium),
                     Text(
-                      AppStrings.homeTitle,
+                      AppStrings.appTitle,
                       style: const TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w700,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
                         color: AppColors.white,
                       ),
                     ),
