@@ -1,3 +1,9 @@
+import 'package:flutter/foundation.dart';
+
+// Only import dart:html on web
+// ignore: uri_does_not_exist
+import 'dart:html' if (dart.library.io) 'dart:html' as web_html;
+
 class AppConstants {
   // Padding & Spacing
   static const double paddingXSmall = 4.0;
@@ -29,5 +35,19 @@ class AppConstants {
   static const Duration animationDuration = Duration(milliseconds: 300);
 
   // API
-  static const String apiBaseUrl = 'http://46.62.175.100:2334';
+  // Returns the API base URL. On web, if a <meta name="api-base-url"> is present
+  // in index.html its content will be used (allows Vercel to inject the final URL).
+  static String get apiBaseUrl {
+    const fallback = 'http://46.62.175.100:2334';
+    if (kIsWeb) {
+      try {
+        final meta = web_html.document.querySelector(
+          'meta[name="api-base-url"]',
+        );
+        final content = meta?.getAttribute('content');
+        if (content != null && content.isNotEmpty) return content;
+      } catch (_) {}
+    }
+    return fallback;
+  }
 }
