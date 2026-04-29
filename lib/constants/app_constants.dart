@@ -38,7 +38,7 @@ class AppConstants {
   // Returns the API base URL. On web, if a <meta name="api-base-url"> is present
   // in index.html its content will be used (allows Vercel to inject the final URL).
   static String get apiBaseUrl {
-    const fallback = 'http://46.62.175.100:2334';
+    const fallback = 'https://park.syadtech.com:9100/';
     if (kIsWeb) {
       try {
         final meta = web_html.document.querySelector(
