@@ -1,6 +1,6 @@
 class AppStrings {
   // App Title
-  static const String appTitle = 'بلاغ بيئي';
+  static const String appTitle = 'تجربة الزائر';
   static const String appSubtitle = 'الإدارة العامة للمتنزهات الوطنية';
 
   // Home Screen
