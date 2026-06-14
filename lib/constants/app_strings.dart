@@ -12,7 +12,7 @@ class AppStrings {
       'اختر تقديم بلاغ جديد للإبلاغ عن أي مخالفات أو انتهاكات بيئية في المتنزهات الوطنية';
 
   // Create Report Screen
-  static const String createReportTitle = 'تقديم بلاغ بيئي';
+  static const String createReportTitle = 'تجربة زائر';
   static const String selectImageLabel = 'اختر صورة من المخالفة';
   static const String selectImageFromCamera = 'من الكاميرا';
   static const String selectImageFromGallery = 'من المعرض';
